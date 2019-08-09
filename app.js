@@ -59,6 +59,10 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 //----------------------------Server on -------------------------------------------------
-app.listen(3000, function(){
-	console.log('YelpCamp Server has started');
-});
+//HEROKU version
+app.listen(process.env.PORT, process.env.IP);
+
+// //GOORM version
+// app.listen(3000, () => {
+// 	console.log('server listenign on port 3000');
+// });
